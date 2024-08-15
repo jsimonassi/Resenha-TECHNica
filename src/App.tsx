@@ -23,7 +23,7 @@ const todoMockList: Todo[] = [
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const {TodoManager} = NativeModules;
+  // const {TodoManager} = NativeModules;
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -41,25 +41,17 @@ function App(): React.JSX.Element {
 
 export default App;
 
+// App -> SafeAreaView -> TodoItem -> TodoItemFilho -> TodoItemNeto
 
+// const TodoItemNeto =() => {
+//   const {items, getTodo} = useItemsContext();
 
-App -> SafeAreaView -> TodoItem -> TodoItemFilho -> TodoItemNeto
+// }
 
+// useItemsContext {
+//   data = useState([]);
 
-
-const TodoItemNeto =() => {
-  const {items, getTodo} = useItemsContext();
-
-
-}
-
-
-useItemsContext {
-  data = useState([]);
-
-
-  export methods {
-    getTodo()
-  }
-}
-
+//   export methods {
+//     getTodo()
+//   }
+// }
