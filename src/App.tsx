@@ -7,9 +7,14 @@
 
 import React from 'react';
 import {Home} from './pages/Home';
+import {MainStoreProvider} from './store';
 
 function App(): React.JSX.Element {
-  return <Home />;
+  return (
+    <MainStoreProvider>
+      <Home />
+    </MainStoreProvider>
+  );
 }
 
 export default App;
