@@ -6,13 +6,17 @@
  */
 
 import React from 'react';
-import {Home} from './pages/Home';
 import {MainStoreProvider} from './store';
+import {NavigationContainer} from '@react-navigation/native';
+import {MainStack} from './routes';
 
 function App(): React.JSX.Element {
   return (
     <MainStoreProvider>
-      <Home />
+      <NavigationContainer>
+        <MainStack />
+      </NavigationContainer>
+      {/* <AddTodo /> */}
     </MainStoreProvider>
   );
 }
