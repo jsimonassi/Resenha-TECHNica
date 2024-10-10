@@ -19,7 +19,7 @@ export const Home = () => {
         console.log(error);
         setIsLoading(false);
       });
-  });
+  }, [todoContext.actions]);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
